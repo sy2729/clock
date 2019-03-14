@@ -1,0 +1,160 @@
+.relative {position: relative;}
+.absolute {position: absolute;}
+.ab-center {top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.full {width: 100%; height: 100%;}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  background: #FFFFFF;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 0px 7px rgba(181,21,27,1);
+  border: 10px solid #FC2128;
+}
+
+.clock > * {
+  z-index: 1;
+}
+
+.nums-collection {
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 3;
+}
+
+.digit-wrap {
+  width: 30px;
+  height: 100%;
+  left: 50%;
+  margin-left: -15px;
+}
+
+.digit-wrap span {
+  left: 50%;
+  font-size: 1.5em;
+  margin-left: -6px;
+}
+.digit-wrap:nth-child(7) span {
+  transform: rotate(180deg);
+}
+
+.clock:after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #ECB6B0;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0px 0px 0px 4px #E7897D;
+}
+.clock:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #C24B42;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.hour {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hour:after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 70px;
+  left: 50%;
+  bottom: 50%;
+  margin-left: -5px;
+  background: #666665;
+}
+
+.minute {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.minute:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 90px;
+  left: 50%;
+  bottom: 50%;
+  margin-left: -5px;
+  background: #666665;
+}
+
+.second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-color: #DC695C;
+}
+
+.second:after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100px;
+  left: 50%;
+  bottom: 50%;
+  margin-left: -5px;
+  background: #DC695C;
+}
+.second:before {
+  z-index: 3;
+  content: '';
+  position: absolute;
+  width: 0px;
+  left: 50%;
+  top: 10%;
+  margin-left: -13px;
+  border: 10px solid;
+  border-color: inherit;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+
+
+.dots-collection {
+  width: 93%;
+  height: 93%; 
+}
+
+.dot:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 5px;
+  height: 5px;
+  background: #A3A3A3;
+  border-radius: 50%;
+}
+.dot:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background: #A3A3A3;
+  border-radius: 50%;
+}
